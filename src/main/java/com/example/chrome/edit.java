@@ -1,23 +1,17 @@
-package firefox;
+package com.example.chrome;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.*;
-//import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
-import java.util.concurrent.TimeUnit;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 import org.openqa.selenium.WebDriver;
-//import org.junit.*;
-//import static org.junit.Assert.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import java.util.concurrent.TimeUnit;
+import org.junit.*;
+import static org.junit.Assert.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+// import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.By;
 
 
-
-public class edit_firefox {
+public class edit {
 
     private WebDriver driver;
     private String baseUrl;
@@ -26,7 +20,7 @@ public class edit_firefox {
 
     @Before
     public void setUp() throws Exception {
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         baseUrl = "http://redmine-train.dev.thumbtack.net:3000/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
@@ -36,7 +30,7 @@ public class edit_firefox {
         driver.get(baseUrl + "/");
         driver.findElement(By.cssSelector("a.login")).click();
         driver.findElement(By.id("username")).clear();
-        driver.findElement(By.id("username")).sendKeys ("nkamarskaya");
+        driver.findElement(By.id("username")).sendKeys("nkamarskaya");
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("o3CDWFAN");
         driver.findElement(By.name("login")).click();

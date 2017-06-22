@@ -1,31 +1,31 @@
-package Chrome;
-import org.openqa.selenium.WebDriver;
+package com.example.tests;
+
+import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
-import org.junit.*;
-import static org.junit.Assert.*;
-import org.openqa.selenium.*;
+
 import org.openqa.selenium.chrome.ChromeDriver;
-// import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.*;
+import static org.testng.Assert.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.By;
 
+public class CreateABug {
+private WebDriver driver;
+private String baseUrl;
+private boolean acceptNextAlert = true;
+private StringBuffer verificationErrors = new StringBuffer();
 
-public class edit {
-
-    private WebDriver driver;
-    private String baseUrl;
-    private boolean acceptNextAlert = true;
-    private StringBuffer verificationErrors = new StringBuffer();
-
-    @Before
-    public void setUp() throws Exception {
+@BeforeClass(alwaysRun = true)
+public void setUp() throws Exception {
+//        driver = new FirefoxDriver();
         driver = new ChromeDriver();
         baseUrl = "http://redmine-train.dev.thumbtack.net:3000/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    }
+        }
 
-    @Test
-    public void test5UpdateABug() throws Exception {
+@Test
+public void test4CreateABug() throws Exception {
         driver.get(baseUrl + "/");
         driver.findElement(By.cssSelector("a.login")).click();
         driver.findElement(By.id("username")).clear();
@@ -45,56 +45,52 @@ public class edit {
         new Select(driver.findElement(By.id("issue_assigned_to_id"))).selectByVisibleText("Natalia Kamarskaya");
         driver.findElement(By.xpath("(//input[@id='issue_watcher_user_ids_'])[15]")).click();
         driver.findElement(By.name("commit")).click();
-        assertTrue(isElementPresent(By.cssSelector("p.author")));
-        driver.findElement(By.linkText("Update")).click();
-        new Select(driver.findElement(By.id("issue_priority_id"))).selectByVisibleText("Urgent");
-        new Select(driver.findElement(By.id("time_entry_activity_id"))).selectByVisibleText("Testing");
-        driver.findElement(By.cssSelector("#issue-form > input[name=\"commit\"]")).click();
-        assertTrue(isElementPresent(By.cssSelector("h4")));
+        assertTrue(isElementPresent(By.cssSelector("div.flash.notice")));
+        assertEquals(driver.findElement(By.cssSelector("div.wiki > p")).getText(), "1 2 3");
+        assertEquals(driver.findElement(By.cssSelector("div.subject > div > h3")).getText(), "nkamarskaya_bug");
         driver.findElement(By.cssSelector("a.logout")).click();
         assertTrue(isElementPresent(By.cssSelector("a.login")));
-    }
+        }
 
-    @After
-    public void tearDown() throws Exception {
+@AfterClass(alwaysRun = true)
+public void tearDown() throws Exception {
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
-            fail(verificationErrorString);
+        fail(verificationErrorString);
         }
-    }
+        }
 
-    private boolean isElementPresent(By by) {
+private boolean isElementPresent(By by) {
         try {
-            driver.findElement(by);
-            return true;
+        driver.findElement(by);
+        return true;
         } catch (NoSuchElementException e) {
-            return false;
+        return false;
         }
-    }
+        }
 
-    private boolean isAlertPresent() {
+private boolean isAlertPresent() {
         try {
-            driver.switchTo().alert();
-            return true;
+        driver.switchTo().alert();
+        return true;
         } catch (NoAlertPresentException e) {
-            return false;
+        return false;
         }
-    }
+        }
 
-    private String closeAlertAndGetItsText() {
+private String closeAlertAndGetItsText() {
         try {
-            Alert alert = driver.switchTo().alert();
-            String alertText = alert.getText();
-            if (acceptNextAlert) {
-                alert.accept();
-            } else {
-                alert.dismiss();
-            }
-            return alertText;
-        } finally {
-            acceptNextAlert = true;
+        Alert alert = driver.switchTo().alert();
+        String alertText = alert.getText();
+        if (acceptNextAlert) {
+        alert.accept();
+        } else {
+        alert.dismiss();
         }
-    }
-
-}
+        return alertText;
+        } finally {
+        acceptNextAlert = true;
+        }
+        }
+        }
