@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="HW3" verbose="1" >
+    <test name="Redmine" >
+        <classes>
+            <class name="com.example.tests.CreateABug" />
+            <class name="com.example.tests.EmptyLogin" />
+            <class name="com.example.tests.logsignout" />
+            <class name="com.example.tests.updateAbug" />
+        </classes>
+    </test>
+</suite>
