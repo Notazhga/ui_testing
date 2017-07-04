@@ -58,5 +58,7 @@
     <orderEntry type="library" name="Maven: org.testng:testng:6.11" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.64" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.17" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: log4j:log4j:1.2.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.maven.surefire:surefire-api:2.12.4" level="project" />
   </component>
 </module>
