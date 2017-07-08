@@ -1,11 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="HW3" duration-ms="15" started-at="2017-07-08T17:31:39Z" finished-at="2017-07-08T17:31:39Z">
+  <suite name="HW3" duration-ms="47279" started-at="2017-07-08T17:36:47Z" finished-at="2017-07-08T17:37:34Z">
     <groups>
     </groups>
-    <test name="Redmine" duration-ms="15" started-at="2017-07-08T17:31:39Z" finished-at="2017-07-08T17:31:39Z">
+    <test name="Redmine" duration-ms="47279" started-at="2017-07-08T17:36:47Z" finished-at="2017-07-08T17:37:34Z">
+      <class name="com.example.tests.updateAbug">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.updateAbug@17f6480]" name="setUp" is-config="true" duration-ms="2742" started-at="2017-07-08T23:37:16Z" finished-at="2017-07-08T23:37:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="test5UpdateABug()[pri:0, instance:com.example.tests.updateAbug@17f6480]" name="test5UpdateABug" duration-ms="14298" started-at="2017-07-08T23:37:18Z" finished-at="2017-07-08T23:37:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5UpdateABug -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.updateAbug@17f6480]" name="tearDown" is-config="true" duration-ms="1166" started-at="2017-07-08T23:37:33Z" finished-at="2017-07-08T23:37:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.tests.updateAbug -->
+      <class name="com.example.tests.EmptyLogin">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.EmptyLogin@71be98f5]" name="setUp" is-config="true" duration-ms="2912" started-at="2017-07-08T23:37:02Z" finished-at="2017-07-08T23:37:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="test2EmptyLogin()[pri:0, instance:com.example.tests.EmptyLogin@71be98f5]" name="test2EmptyLogin" duration-ms="2340" started-at="2017-07-08T23:37:05Z" finished-at="2017-07-08T23:37:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2EmptyLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.EmptyLogin@71be98f5]" name="tearDown" is-config="true" duration-ms="1260" started-at="2017-07-08T23:37:07Z" finished-at="2017-07-08T23:37:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.tests.EmptyLogin -->
+      <class name="com.example.tests.logsignout">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.logsignout@6fadae5d]" name="setUp" is-config="true" duration-ms="2934" started-at="2017-07-08T23:37:08Z" finished-at="2017-07-08T23:37:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="test1LoginSignOut()[pri:0, instance:com.example.tests.logsignout@6fadae5d]" name="test1LoginSignOut" duration-ms="3160" started-at="2017-07-08T23:37:11Z" finished-at="2017-07-08T23:37:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1LoginSignOut -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.logsignout@6fadae5d]" name="tearDown" is-config="true" duration-ms="1229" started-at="2017-07-08T23:37:14Z" finished-at="2017-07-08T23:37:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.tests.logsignout -->
+      <class name="com.example.tests.CreateABug">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.CreateABug@7a0ac6e3]" name="setUp" is-config="true" duration-ms="4559" started-at="2017-07-08T23:36:47Z" finished-at="2017-07-08T23:36:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="test4CreateABug()[pri:0, instance:com.example.tests.CreateABug@7a0ac6e3]" name="test4CreateABug" duration-ms="8998" started-at="2017-07-08T23:36:51Z" finished-at="2017-07-08T23:37:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4CreateABug -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.CreateABug@7a0ac6e3]" name="tearDown" is-config="true" duration-ms="1634" started-at="2017-07-08T23:37:00Z" finished-at="2017-07-08T23:37:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.tests.CreateABug -->
     </test> <!-- Redmine -->
   </suite> <!-- HW3 -->
 </testng-results>
